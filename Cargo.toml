@@ -1,0 +1,31 @@
+[package]
+authors = ["xriss_xross <xriss_xross@outlook.com>"]
+edition = "2021"
+name = "rustico"
+version = "0.1.0"
+rust-version = "1.74.0"
+description = "A Discord music bot"
+license = "GNU 3.0"
+repository = "https://github.com/xriss-xross/rustico"
+
+[dependencies]
+tokio = { version = "1.25.1", default-features = false, features = ["rt-multi-thread"]}
+futures-util = { version = "0.3.13", default-features = false }
+async-trait = { version = "0.1.48", default-features = false }
+poise = "0.6.1"
+env_logger = "0.11.5"
+poise_macros = "0.6.1"
+dotenv = "0.15.0"
+
+[dependencies.serenity]
+default-features = false
+features = ["builder", "client", "gateway", "model", "utils", "collector", "framework"]
+version = "0.12.2"
+
+[dev-dependencies]
+futures = { version = "0.3.13", default-features = false }
+
+fluent = "0.16.0"
+intl-memoizer = "0.5.1"
+fluent-syntax = "0.11"
+rand = "0.8.5"
